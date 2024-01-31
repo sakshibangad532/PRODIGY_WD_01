@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Tutorials and Exercises</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="main"> 
+            <img src="file:///C:/Users/acer/Pictures/logo.jpg" class="logo">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Tutorials">Coding Tutorials</a></li>
+                <li><a href="https://edabit.com/challenges" target="_blank">Coding Exercises</a></li>
+                <li><a href="#Sandbox">Coding Sandbox</a></li>
+            </ul>
+        </div>
+        <div class="title">
+            <h1>WELCOME TO CODEBLAST</h1>
+            <hr>
+        </div>
+    </header>
+            <div id="Sandbox">
+            
+        
+            <div class="code-container">
+                <div class="code-input">
+                    <h2> HTML</h2>
+                    <textarea id="html-code" rows="15" cols="58 "></textarea>
+                </div>
+        
+                <div class="code-input">
+                    <h2>CSS</h2>
+                    <textarea id="css-code" rows="15" cols="58  "></textarea>
+                </div>
+        
+                <div class="code-input">
+                    <h2> JavaScript</h2>
+                    <textarea id="js-code" rows="15" cols="58   "></textarea>
+                </div>
+            </div>
+        
+            <div>
+                <br>
+                <h2>Output</h2>
+                <br>
+                <div id="output"></div>
+            </div>
+        
+            <div id="Tutorials">
+            
+                <div class="card-container">
+                    <!-- First Row -->
+                    <div class="card">
+                        <iframe width="450" height="315" src="https://www.youtube.com/embed/HcOc7P5BMi4?si=QFPBFAxoeF2KOr78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="card">
+                        <iframe width="450" height="315" src="https://www.youtube.com/embed/ESnrn1kAD4E?si=h48dP4qEyQoVE-fg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="card">
+                        <iframe width="450" height="315" src="https://www.youtube.com/embed/B7wHpNUUT4Y?si=14rXHOtkD-hxYnB-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <!-- Second Row -->
+                    <div class="card">
+                        <iframe width="450" height="315" src="https://www.youtube.com/embed/vP3TRAsjZss?si=DKh-ZkOf_U4whVGT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="card">
+                        <iframe width="450" height="315" src="https://www.youtube.com/embed/6mbwJ2xhgzM?si=u5a8rvX1el1sSqnU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="card">
+                        <iframe width="450" height="315" src="https://www.youtube.com/embed/Ez8F0nW6S-w?si=LOPaIJvTyGzHRwoL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="Exercises">
+                <li><a href="https://edabit.com/challenges" target="_blank">Coding Exercises</a></li>
+
+
+             </div>
+             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+             crossorigin="anonymous"></script>
+     <script>
+         // JavaScript code remains the same
+         function updateOutput() {
+             const html = document.getElementById('html-code').value;
+             const css = document.getElementById('css-code').value;
+             const js = document.getElementById('js-code').value;
+             const output = document.getElementById('output');
+ 
+             output.innerHTML = html;
+ 
+             const style = document.createElement('style');
+             style.innerHTML = css;
+             output.appendChild(style);
+ 
+             const script = document.createElement('script');
+             script.innerHTML = js;
+             output.appendChild(script);
+         }
+ 
+         document.getElementById('html-code').addEventListener('input', updateOutput);
+         document.getElementById('css-code').addEventListener('input', updateOutput);
+         document.getElementById('js-code').addEventListener('input', updateOutput);
+ 
+         updateOutput();
+     </script>
+ </body>
+ </html>
+ 
