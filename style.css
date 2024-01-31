@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic", sans-serif; /* Added quotes around font name */
+}
+body {
+    background-color: rgb(47, 24, 150); /* Added a semicolon */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("file:///C:/Users/acer/Pictures/background.jpg");
+    height: 100vh; 
+    width: 100%; /* Adjusted to full width */
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid #fff;
+    transition: 0.6s ease;
+}
+
+ul li a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.title {
+    font-size: 25px;
+    color: #fff; /* Corrected capitalization to "color" */
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+code-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Code Input Areas */
+.code-input {
+    flex: 1;
+    padding: 10px;
+    border: 5px dotted brown;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #ccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+
+/* Output Area */
+#output {
+    display: block;
+    flex: 1;
+    align-content: center;
+    border: 5px dotted brown;
+    padding: 24px;
+    margin: auto;
+    background-color: #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 1440px;
+    height: 300px;
+}
+h2 {
+    color: #fff; /* Set the color to white */
+}
+
+#output {
+    color: #fff; /* Set the color of the output content to white */
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .code-container {
+        flex-direction: column;
+    }
+
+    .code-input {
+        width: 100%;
+    }
+
+    #output {
+        width: 100%;
+    }
+}
+
+
+/* Card container */
+.card-container {
+    text-align: center;
+}
+
+/* Individual card styles */
+.card {
+    display: inline-block;
+
+    width: calc(31% - 20px);
+    /* 33.33% width with a margin of 20px between cards */
+    padding: 15px;
+    background-color:#ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: left;
+    margin: 10px;
+    /* Add some space around each card */
+}
